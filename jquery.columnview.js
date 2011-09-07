@@ -1,15 +1,13 @@
 /**
- * jquery.columnview-1.2.js
+ * jquery.columnview-1.3.js
  *
  * Created by Chris Yates on 2009-02-26.
  * http://christianyates.com
- * Copyright 2009 Christian Yates and ASU Mars Space Flight Facility. All rights reserved.
  *
- * Modified by Manuel Odendahl <wesen@ruinwesen.com>
- * August - September 2011
+ * Copyright 2009 Christian Yates and ASU Mars Space Flight Facility. All rights reserved.
+ * Copyright 2011 Manuel Odendahl <wesen@ruinwesen.com>
  *
  * Supported under jQuery 1.5.x or later
- * Keyboard navigation supported under 1.3.x or later
  *
  * Dual licensed under MIT and GPL.
  */
@@ -89,6 +87,14 @@
       return $this;
     },
 
+    container: function () {
+      var data = $(this).data("columnview");
+      if (!data) {
+        return;
+      }
+      return data.container;
+    },
+
     /**
      * Handle a click event on an item inside the menu.
      *
@@ -139,6 +145,8 @@
         if ($self.hasClass("hasChildMenu")) {
           // Menu has children, so add another submenu
           submenu(container, $self);
+          /* triggering will happen in submenu */
+          return;
         } else {
           // No children, show title instead (if it exists, or a link)
           var previewcontainer = $('<div/>').addClass('feature').appendTo(container);

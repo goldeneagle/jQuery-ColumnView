@@ -4,12 +4,13 @@ A simple script to transform a hierarchical HTML list into a Miller
 Column UI (AKA, Mac OS X Finder style, NeXT style column view).
 
 This plugin was expanded to include:
-- using custom events instead of callbacks
-- support a dblclick event
-- loading of additional content with a custom callback (for example to load subtrees using ajax)
-- navigating to a specific element
-- clicking on nodes programmatically
-- enabling/disabling adding CSS automatically
+
+* using custom events instead of callbacks
+* support a dblclick event
+* loading of additional content with a custom callback (for example to load subtrees using ajax)
+* navigating to a specific element
+* clicking on nodes programmatically
+* enabling/disabling adding CSS automatically
 
 ## Compatibility ##
 
@@ -17,6 +18,8 @@ The plugin works fine with jQuery 1.6.2. It requires jQuery 1.5.x or
 newer because of its use of deferreds.
 
 ## Usage ##
+
+Check these examples out on the [jquery-columnview github page](http://wesen.github.com/jQuery-ColumnView/demo.html).
 
 ### Simple list ###
 
