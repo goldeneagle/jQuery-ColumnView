@@ -45,7 +45,6 @@
 
       if (data) {
         /* plugin has already been initialized */
-        console.log("already initialized");
         return $this;
       }
       
