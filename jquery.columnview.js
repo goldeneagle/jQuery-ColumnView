@@ -193,7 +193,7 @@
       if ($this.hasClass('containerobj')) {
         $container = $this;
       } else {
-        $container = $this.parents('div.containerobj:first');
+        $container = $this.siblings('div.containerobj:first');
       }
       var data = $container.data("columnview");
       if (!data) {
