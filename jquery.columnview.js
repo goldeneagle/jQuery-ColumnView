@@ -19,7 +19,7 @@
     fixedwidth: false,  // Use fixed width columns
     addCSS:     true,   // enable to have columnview automatically insert its CSS
     useCanvas:  true,   // enable to have columnview generate a canvas arrow to indicate subcategories
-    getSubtree: undefined, // callback for getting new data
+    getSubtree: undefined     // callback for getting new data
   };
 
   // Firefox doesn't repeat keydown events when the key is held, so we use
