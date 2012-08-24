@@ -104,7 +104,7 @@
       var $container = $self.parents('div.containerobj:first');
       var data = $container.data("columnview");
       if (!data) {
-        return;
+        return false;
       }
       var container = data.container;
       var origElt = data.origElt;
@@ -145,7 +145,7 @@
           // Menu has children, so add another submenu
           submenu(container, $self);
           /* triggering will happen in submenu */
-          return;
+          return false;
         } else {
           // No children, show title instead (if it exists, or a link)
           var previewcontainer = $('<div/>').addClass('feature').appendTo(container);
@@ -175,6 +175,8 @@
       }
 
       origElt.trigger("columnview_select", [container.find(".active")]);
+
+      return false;
     },
 
     /**
@@ -222,7 +224,7 @@
       var $self = undefined;
       var data = $this.data("columnview");
       if (!data) {
-        return;
+        return false;
       }
       var container = data.container;
       var origElt = data.origElt;
@@ -278,6 +280,8 @@
         }
         event.preventDefault();
       }
+
+      return false;
 
     }
   };
