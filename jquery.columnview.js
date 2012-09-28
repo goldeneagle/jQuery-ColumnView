@@ -38,6 +38,9 @@
     }
   };
 
+  var isMulti = function (elt) {
+  };
+
   var methods = {
     init: function (options) {
       var $this = $(this);
@@ -53,6 +56,12 @@
       /* fix order of declaration */
       if (!settings.getSubtree) {
         settings.getSubtree = getSubtree;
+      }
+
+      if (!settings.checkMulti) {
+        settings.checkMulti = function () {
+          return settings.multi;
+        }
       }
 
       if (settings.addCSS) {
@@ -240,7 +249,7 @@
           $self = $target;
         }
 
-        if (!settings.multi) {
+        if (!settings.checkMulti(event, $self)) {
           delete event.shiftKey;
           delete event.metaKey;
         }
