@@ -347,7 +347,7 @@
         var $item = $(item);
         var $subitem = $(':eq(0)', $item)
           .clone(true)
-          .wrapInner("<span/>")
+          .wrapInner("<span class=\"name\"/>")
           .data('sub', $item.children('ul'))
           .appendTo(submenu);
 
